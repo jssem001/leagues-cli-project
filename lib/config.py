@@ -3,13 +3,6 @@ CONN = sqlite3.connect('league.db')
 CURSOR = CONN.cursor()
 
 class Database:
-    # def __init__(self, team_name, team_id=None):
-    #     self.team_id = team_id
-    #     self.team_name = team_name
-
-    # def __repr__(self):
-    #     return f"Team(id = {self.team_id}, name = {self.team_name})"
-
     @classmethod
     def create_tables(cls):
         sql_teams="""
@@ -29,7 +22,7 @@ class Database:
         )
         """
         CURSOR.execute(sql_games)
-        # CONN.commit()
+        
 
         sql_stadiums="""
         CREATE TABLE IF NOT EXISTS stadiums(
@@ -38,7 +31,7 @@ class Database:
         )
         """
         CURSOR.execute(sql_stadiums)
-        # CONN.commit()
+        
 
         sql_locations="""
         CREATE TABLE IF NOT EXISTS locations(

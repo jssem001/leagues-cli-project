@@ -8,7 +8,9 @@ class Database:
         sql_teams="""
         CREATE TABLE IF NOT EXISTS teams(
         team_id INTEGER PRIMARY KEY,
-        team_name varchar(40)
+        team_name varchar(40),
+        stadium varchar(40), 
+        FOREIGN KEY(stadium) REFERENCES stadiums(stadium_name)
         )
         """
         CURSOR.execute(sql_teams)
@@ -17,8 +19,14 @@ class Database:
         sql_games="""
         CREATE TABLE IF NOT EXISTS games(
         game_id INTEGER PRIMARY KEY,
-        team_id INTEGER,
-        FOREIGN KEY(team_id) REFERENCES teams(team_id)
+        home_team varchar(40),
+        away_team varchar(40),
+        home_score INTEGER,
+        away_score INTEGER,
+        stadium varchar(40),
+        FOREIGN KEY(home_team) REFERENCES teams(team_name)
+        FOREIGN KEY(away_team) REFERENCES teams(team_name)
+        FOREIGN KEY(stadium) REFERENCES stadiums(stadium_name)
         )
         """
         CURSOR.execute(sql_games)
@@ -27,7 +35,9 @@ class Database:
         sql_stadiums="""
         CREATE TABLE IF NOT EXISTS stadiums(
         stadium_id INTEGER PRIMARY KEY,
-        stadium_name varchar(40)
+        stadium_name varchar(40),
+        location varchar(40),
+        FOREIGN KEY(location) REFERENCES locations(location_name)
         )
         """
         CURSOR.execute(sql_stadiums)
@@ -36,8 +46,7 @@ class Database:
         sql_locations="""
         CREATE TABLE IF NOT EXISTS locations(
         location_id INTEGER PRIMARY KEY,
-        stadium_id INTEGER,
-        FOREIGN KEY(stadium_id) REFERENCES stadiums(stadium_id)
+        location_name varchar(40)
         )
         """
         CURSOR.execute(sql_locations)

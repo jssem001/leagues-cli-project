@@ -26,8 +26,20 @@ class Stadiums:
     
     #show team that plays in a stadium
     @classmethod
-    def teams_in_stadium(cls, stadium_id):
+    def teams_in_stadium(cls, stadium_name):
         sql = "SELECT * FROM teams WHERE stadium = ?"
-        CURSOR.execute(sql, (stadium_id,))
+        CURSOR.execute(sql, (stadium_name,))
         team = CURSOR.fetchall()
         return team
+    
+    #display total goals for a specific stadium
+    @classmethod
+    def total_goals(cls, stadium_name):
+        sql = """
+        SELECT SUM(home_score + away_score)
+        FROM games
+        WHERE stadium = ? 
+        """
+        CURSOR.execute(sql, (stadium_name,))
+        all_goals = CURSOR.fetchone()[0]
+        return all_goals

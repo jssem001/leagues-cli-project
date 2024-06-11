@@ -16,3 +16,11 @@ class Locations:
         CURSOR.execute(sql)
         locations = CURSOR.fetchall()
         return locations
+    
+    #show stadiums in a location
+    @classmethod
+    def local_stadiums(cls, location_name):
+        sql = "SELECT * FROM stadiums WHERE location = ?"
+        CURSOR.execute(sql, (location_name,))
+        stadiums = CURSOR.fetchall()
+        return stadiums

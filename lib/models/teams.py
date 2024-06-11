@@ -4,9 +4,9 @@ from config import CONN, CURSOR
 class Teams:
     #add a team
     @classmethod
-    def create_team(cls, team_name):
-        sql = "INSERT INTO teams (team_name) VALUES (?)"
-        CURSOR.execute(sql, (team_name,))
+    def create_team(cls, team_name, stadium):
+        sql = "INSERT INTO teams (team_name, stadium) VALUES (?,?)"
+        CURSOR.execute(sql, (team_name,stadium))
         CONN.commit()
 
     #show all teams

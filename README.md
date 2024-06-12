@@ -1,11 +1,10 @@
 
 # Football League Management Database 
 
-## PROJECT DESCRIPTION 
+## Project Description 
 This project is a command-line application that allows users to access and manage information about their favorite football mini-league.
 
-
-## PROJECT REQUIREMENTS
+## Project Requirements
 ### ORM Requirements
 The application must include a database created and modified with Python ORM methods that you write.
 
@@ -25,7 +24,6 @@ Imports are used in files only where necessary.
 Project folders, files, and modules should be organized and follow appropriate naming conventions.
 The project should include a README.md that describes the application.
 
-
 ## More details on the project.
 A User Can:
 - Log (Create) a game
@@ -44,11 +42,12 @@ A User Can:
 - Fetch all games at a location
 - Fetch all teams that have played a location or stadium
 - Fetch all stadiums at a location
-## Technology used
+
+## Technology Used
     -PYTHON
     -SQL
 
-## Support and contact details
+## Support And Contact Details
 
 email: muwanguzi.ssemwanga@student.moringaschool.com
 contact: +254717602334

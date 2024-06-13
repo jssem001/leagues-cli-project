@@ -38,6 +38,7 @@ A User Can:
 ## Technology Used
     -PYTHON
     -SQL
+Run *python lib/main.py* in the project directory to start the application.
 
 ## Support And Contact Details
 

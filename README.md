@@ -26,22 +26,14 @@ The project should include a README.md that describes the application.
 
 ## More details on the project.
 A User Can:
-- Log (Create) a game
-- Update a game
-- Delete a game
-- View all games
-- Count the scores
-- Average the scores
-- View all teams
-- Add a team
-- Delete a team
-- Update a team
-- View all games for a single team
-- Fetch games for a single team
-- Fetch all games at a stadium
-- Fetch all games at a location
-- Fetch all teams that have played a location or stadium
-- Fetch all stadiums at a location
+
+**Game Management**: Create a new game, Show all games, Show a single game, Edit a game, Delete a game, Display total goals scored by a team, Display average goals scored by a team
+
+**Team Management**: Create a new team, Show all teams, Show a single team, Edit a team, Delete a team
+
+**Stadium Management**: Create a new stadium, Show all stadiums, Display stadium home team, Display games played in stadium, Display Goals scored in stadium
+
+**Location Management**: Add a location, Show all locations, Display stadiums in a location
 
 ## Technology Used
     -PYTHON
